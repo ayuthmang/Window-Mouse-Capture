@@ -1,6 +1,6 @@
 ﻿namespace Window_Mouse_Capture
 {
-    partial class Form1
+    partial class frmMain
     {
         /// <summary>
         /// Required designer variable.
@@ -29,19 +29,19 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.NotifyIcon notifyIcon1;
+            System.Windows.Forms.NotifyIcon notifyIconMain;
             this.contextMenuStripMain = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
+            notifyIconMain = new System.Windows.Forms.NotifyIcon(this.components);
             this.contextMenuStripMain.SuspendLayout();
             this.SuspendLayout();
             // 
-            // notifyIcon1
+            // notifyIconMain
             // 
-            notifyIcon1.ContextMenuStrip = this.contextMenuStripMain;
-            notifyIcon1.Text = "notifyIconMain";
-            notifyIcon1.Visible = true;
+            notifyIconMain.ContextMenuStrip = this.contextMenuStripMain;
+            notifyIconMain.Text = "notifyIconMain";
+            notifyIconMain.Visible = true;
             // 
             // contextMenuStripMain
             // 
@@ -49,7 +49,7 @@
             this.toolStripTextBox1,
             this.exitToolStripMenuItem});
             this.contextMenuStripMain.Name = "contextMenuStripMain";
-            this.contextMenuStripMain.Size = new System.Drawing.Size(161, 73);
+            this.contextMenuStripMain.Size = new System.Drawing.Size(161, 51);
             // 
             // toolStripTextBox1
             // 
@@ -63,13 +63,16 @@
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
-            // Form1
+            // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
-            this.Name = "Form1";
+            this.Name = "frmMain";
+            this.ShowIcon = false;
             this.Text = "Form1";
+            this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
+            this.Load += new System.EventHandler(this.frmMain_Load);
             this.contextMenuStripMain.ResumeLayout(false);
             this.contextMenuStripMain.PerformLayout();
             this.ResumeLayout(false);
