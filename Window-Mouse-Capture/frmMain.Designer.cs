@@ -29,19 +29,18 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.NotifyIcon notifyIconMain;
+            this.notifyIconMain = new System.Windows.Forms.NotifyIcon(this.components);
             this.contextMenuStripMain = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            notifyIconMain = new System.Windows.Forms.NotifyIcon(this.components);
             this.contextMenuStripMain.SuspendLayout();
             this.SuspendLayout();
             // 
             // notifyIconMain
             // 
-            notifyIconMain.ContextMenuStrip = this.contextMenuStripMain;
-            notifyIconMain.Text = "notifyIconMain";
-            notifyIconMain.Visible = true;
+            this.notifyIconMain.ContextMenuStrip = this.contextMenuStripMain;
+            this.notifyIconMain.Text = "notifyIconMain";
+            this.notifyIconMain.Visible = true;
             // 
             // contextMenuStripMain
             // 
@@ -49,7 +48,8 @@
             this.toolStripTextBox1,
             this.exitToolStripMenuItem});
             this.contextMenuStripMain.Name = "contextMenuStripMain";
-            this.contextMenuStripMain.Size = new System.Drawing.Size(161, 51);
+            this.contextMenuStripMain.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
+            this.contextMenuStripMain.Size = new System.Drawing.Size(161, 73);
             // 
             // toolStripTextBox1
             // 
@@ -68,10 +68,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmMain";
             this.ShowIcon = false;
-            this.Text = "Form1";
+            this.ShowInTaskbar = false;
             this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMain_FormClosing);
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.contextMenuStripMain.ResumeLayout(false);
             this.contextMenuStripMain.PerformLayout();
@@ -84,6 +88,7 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStripMain;
         private System.Windows.Forms.ToolStripTextBox toolStripTextBox1;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+        private System.Windows.Forms.NotifyIcon notifyIconMain;
     }
 }
 
