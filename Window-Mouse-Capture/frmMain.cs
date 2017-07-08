@@ -20,12 +20,12 @@ namespace Window_Mouse_Capture
 
         private void Startup()
         {
-
+            notifyIconMain.Visible = true;
         }
 
         private void Shutdown()
         {
-
+            notifyIconMain.Visible = false;
         }
         public frmMain()
         {
@@ -40,13 +40,11 @@ namespace Window_Mouse_Capture
         private void frmMain_Load(object sender, EventArgs e)
         {
             Startup();
-            notifyIconMain.Visible = true;
         }
 
         private void frmMain_FormClosing(object sender, FormClosingEventArgs e)
         {
             Shutdown();
-            notifyIconMain.Visible = false;
         }
     }
 }

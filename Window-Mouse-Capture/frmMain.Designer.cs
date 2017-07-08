@@ -49,7 +49,7 @@
             this.exitToolStripMenuItem});
             this.contextMenuStripMain.Name = "contextMenuStripMain";
             this.contextMenuStripMain.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.contextMenuStripMain.Size = new System.Drawing.Size(161, 73);
+            this.contextMenuStripMain.Size = new System.Drawing.Size(161, 51);
             // 
             // toolStripTextBox1
             // 
@@ -68,6 +68,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
+            this.ControlBox = false;
+            this.Enabled = false;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
